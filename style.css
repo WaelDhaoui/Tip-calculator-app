@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    /* color: hsl(189, 41%, 97%);
+    color: hsl(185, 41%, 84%);
+    color: hsl(184, 14%, 56%);
+    color: hsl(186, 14%, 43%);
+    color: hsl(183, 100%, 15%); */
+}
+body {
+    background-color: hsl(185, 41%, 84%);
+}
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 13% 5%;
+}
+@media (max-width: 767px) {
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 13% 5%;
+    }
+}
+.container {
+    width: 47%;
+    margin: 10% auto;
+}
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+.container > img {
+    display: block;
+    margin: 1% auto 10%;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 4%;
+    padding-left: 8%;
+    border-radius: 20px;
+}
+@media (max-width: 767px) {
+    .content {
+        display: block;
+        background-color: white;
+        padding: 6% 4%;
+        padding-left: 8%;
+        border-radius: 20px;
+    }
+}
+.content .bill {
+    flex-basis: 47%;
+}
+.bill input {
+    background-color: hsl(189deg 27% 94%);
+    outline: none;
+    border: none;
+    height: 24px;
+    color: hsl(183, 100%, 15%);
+    font-size: 18px;
+    font-weight: 600;
+    padding-right: 2%;
+    display: block;
+    position: relative;
+    border-radius: 4px;
+    direction: rtl;
+}
+.bill input:focus {
+    border: 2px solid #5daaa2;
+}
+@media (max-width: 767px) {
+    .bill input {
+        background-color: hsl(189deg 27% 94%);
+        outline: none;
+        border: none;
+        height: 32px;
+        text-align: right;
+        color: hsl(183, 100%, 15%);
+        font-size: 18px;
+        font-weight: 600;
+        padding-right: 2%;
+        display: block;
+        position: relative;
+        transition: .3s;
+        border-radius: 4px;
+    }
+}
+.bill > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .bill > div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 7%;
+        position: relative;
+    }
+}
+@media (max-width: 767px) {
+    .bill > div:nth-child(2) {
+        margin-bottom: 13%;
+    }
+}
+.bill > div label {
+    font-size: smaller;
+    font-weight: 600;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 2%;
+    width: fit-content;
+    position: relative;
+}
+.bill li {
+    flex-basis: 30%;
+    background-color: hsl(183, 100%, 15%);
+    padding: 4% 31%;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+ul > .clicked {
+    background-color: #5daaa2;
+}
+@media (max-width: 767px) {
+    .bill li {
+        background-color: hsl(183, 100%, 15%);
+        padding: 4% 45%;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
+.bill ul li:last-child {
+    padding: 0;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .bill ul li:last-child {
+        background-color: transparent;
+    }
+}
+.bill li input {
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 14px;
+    padding-right: 10%;
+    color: hsl(183deg 100% 15% / 33%);
+    transition: .3s;
+}
+.bill .clicked input {
+    color: hsl(183, 100%, 15%);
+}
+@media (max-width: 767px) {
+    .bill li input {
+        width: 100%;
+        height: 100%;
+        display: block;
+        font-size: 14px;
+        padding-right: 28%;
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.bill > div img {
+    position: absolute;
+    top: 30px;
+    left: 2%;
+    width: 9px;
+}
+@media (max-width: 767px) {
+    .bill > div img {
+        top: 33.5px;
+        left: 3%;
+        width: 11px;
+    }
+}
+.bill > div:nth-child(3) .active::after {
+    content: 'Can\'t be zero';
+    position: absolute;
+    color: #ed9081;
+    font-size: smaller;
+    width: 80%;
+    top: 13%;
+    left: 157%;
+}
+.bill > div:nth-child(3) .active + input:focus {
+    border-color: #ed9081;
+}
+.content .result {
+    flex-basis: 47%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    padding: 5%;
+}
+.result  div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 13%;
+}
+@media (max-width: 767px) {
+    .result  div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 3%;
+    }
+}
+.result  h4 {
+    font-size: 12px;
+    color: hsl(189deg 3% 83%);
+}
+.result  span {
+    color: #729da3;
+    font-size: smaller;
+}
+.result  p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #2ca696;
+}
+.result  button {
+    width: 100%;
+    background-color: #2ca696;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: hsl(183, 100%, 15%);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 1%;
+    margin-top: 17%;
+}
+@media (max-width: 767px) {
+    .result  button {
+        margin-top: 2%;
+    }
+}
+.result  button:hover {
+    background-color: #9fe8df;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.svg" alt="logo.svg">
+        <div class="content">
+            <div class="bill">
+                <div>
+                    <label for=B>Bill</label>
+                    <input type="number" name="bill" id="B">
+                    <img src="images/icon-dollar.svg" alt="icon-dollar/svg">
+                </div>
+                <div>
+                    <label for=S>Select Tip %</label>
+                    <ul>
+                        <li>5%</li>
+                        <li>10%</li>
+                        <li>15%</li>
+                        <li>25%</li>
+                        <li>50%</li>
+                        <li><input type="number" name="bill" id="S" placeholder="Custom"></li>
+                    </ul>
+                </div>
+                <div>
+                    <label for=C>Number of People</label>
+                    <input type="number" name="np" id="C">
+                    <img src="images/icon-person.svg" alt="icon-person/svg">
+                </div>
+            </div>
+            <div class="result">
+                <div>
+                    <h4>Tip Amount<br><span>/ person</span></h4>
+                    <p></p>
+                </div>
+                <div>
+                    <h4>Total<br><span>/ person</span></h4>
+                    <p></p>
+                </div>
+                <button>Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/wael-dhaoui-2794501b3/">Wael Dhaoui</a>.
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
