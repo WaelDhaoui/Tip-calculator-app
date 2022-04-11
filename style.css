@@ -3,11 +3,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Space Mono', monospace;
-    /* color: hsl(189, 41%, 97%);
-    color: hsl(185, 41%, 84%);
-    color: hsl(184, 14%, 56%);
-    color: hsl(186, 14%, 43%);
-    color: hsl(183, 100%, 15%); */
 }
 body {
     background-color: hsl(185, 41%, 84%);
@@ -28,16 +23,16 @@ ul {
         gap: 13% 5%;
     }
 }
-.container {
-    width: 47%;
-    margin: 10% auto;
+header {
+    width: 50%;
+    margin: 7% auto 6%;
 }
 @media (max-width: 767px) {
-    .container {
+    header {
         width: 100%;
     }
 }
-.container > img {
+header > img {
     display: block;
     margin: 1% auto 10%;
 }
@@ -65,7 +60,7 @@ ul {
     background-color: hsl(189deg 27% 94%);
     outline: none;
     border: none;
-    height: 24px;
+    height: 35px;
     color: hsl(183, 100%, 15%);
     font-size: 18px;
     font-weight: 600;
@@ -179,9 +174,9 @@ input::-webkit-inner-spin-button {
 }
 .bill > div img {
     position: absolute;
-    top: 30px;
+    top: 34px;
     left: 2%;
-    width: 9px;
+    width: 11px;
 }
 @media (max-width: 767px) {
     .bill > div img {
@@ -243,8 +238,8 @@ input::-webkit-inner-spin-button {
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
-    padding: 1%;
-    margin-top: 17%;
+    padding: 2%;
+    margin-top: 23%;
 }
 @media (max-width: 767px) {
     .result  button {
